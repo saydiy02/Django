@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggested Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #444;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .prediction {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .prediction-heading {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .prediction-text {
+            font-size: 18px;
+            color: #666;
+        }
+        .footer {
+            font-size: 14px;
+            color: #666;
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .next-button {
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tools suggestion</h1>
+    <div class="prediction">
+        <h2 class="prediction-heading">Suggestion</h2>
+        {% if prediction == 0 %}
+            <p class="prediction-text">Nmap & Nikto</p>
+        {% elif prediction == 1 %}
+            <p class="prediction-text">Nmap & Burpsuite</p>
+        {% else %}
+            <p class="prediction-text">Invalid prediction value</p>
+        {% endif %}
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Penetration Testing Tools Recommendation System</p>
+    </div>
+</body>
+</html>
