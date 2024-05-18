@@ -1,78 +1,71 @@
-<!--DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suggested Tool</title>
-</head>
-<body>
-    <h1>Tools suggestion</h1>
-    <p>Prediction: {{ prediction }}</p>
-</body>
-</html-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suggested Tool</title>
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f8f8f8;
             color: #444;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            text-align: center;
-            padding-top: 50px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         h1 {
             font-size: 36px;
+            text-align: center;
             margin-bottom: 30px;
             color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
-        p {
-            font-size: 20px;
-            margin-bottom: 20px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
-        .prediction {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 400px;
-            margin: 0 auto;
+        table, th, td {
+            border: 1px solid #ccc;
         }
-        .prediction-heading {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #333;
+        th, td {
+            padding: 10px;
+            text-align: left;
         }
-        .prediction-text {
-            font-size: 18px;
-            color: #666;
-        }
-        .footer {
-            font-size: 14px;
-            color: #666;
-            position: fixed;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
+        th {
+            background-color: #f4f4f4;
         }
     </style>
 </head>
 <body>
-    <h1>Tools suggestion</h1>
-    <div class="prediction">
-        <h2 class="prediction-heading">Prediction</h2>
-        <p class="prediction-text">{{ prediction }}</p>
-    </div>
-    <div class="footer">
-        <p>&copy; 2024 Penetration Testing Tools Recommendation System</p>
+    <div class="container">
+        <h1>Prediction Results</h1>
+        <table>
+            <tr>
+                <th>Goal</th>
+                <th>Type</th>
+                <th>Tools</th>
+                <th>Platform</th>
+                <th>Prediction</th>
+            </tr>
+            {% for item in predictions %}
+            <tr>
+                <td>{{ item.data.goal }}</td>
+                <td>{{ item.data.typeS }}</td>
+                <td>{{ item.data.toolsC }}</td>
+                <td>{{ item.data.platform }}</td>
+                <td>{{ item.prediction }}</td>
+            </tr>
+            {% endfor %}
+        </table>
     </div>
 </body>
 </html>
-

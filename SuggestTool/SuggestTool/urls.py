@@ -22,5 +22,7 @@ from PenTool import views
 urlpatterns = [
     path('', views.home, name='home'),
     path('admin/', admin.site.urls),
-    path('PenTool/',include('PenTool.urls')),
+    path('login/', views.login_view, name='login'),
+    path('register/', views.register_view, name='register'),
+    path('PenTool/',include('PenTool.urls')),   
 ]

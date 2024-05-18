@@ -1,69 +1,54 @@
-<!--DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    <h1>Welcome to Penetration Testing Tools Recommendation System</h1>
-    <button onclick="redirectToNextPage()">Next Page</button>
-
-    <script>
-        function redirectToNextPage() {
-            window.location.href = "PenTool/";
-        }
-    </script>
-</body>
-</html-->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vintage Penetration Testing Tools Recommendation System</title>
+    <title>Home</title>
     <style>
         body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #f0e5d8;
-            color: #444;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-            padding-top: 50px;
         }
         h1 {
             font-size: 36px;
-            margin-bottom: 30px;
             color: #333;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
         }
-        button {
-            padding: 15px 30px;
-            background-color: #574d43;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 20px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+        p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
         }
-        button:hover {
-            background-color: #7d6e60;
+        a {
+            text-decoration: none;
+            color: #6c63ff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #4338ca;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to Penetration Testing Tools Recommendation System</h1>
-    <button onclick="redirectToNextPage()">Next Page</button>
+    <div class="container">
+        <h1>Welcome to Penetration Testing Tools Recommendation System</h1>
+        
+        <p>Already have an account? <a href="/login">Login</a></p>
 
-    <script>
-        function redirectToNextPage() {
-            window.location.href = "PenTool/";
-        }
-    </script>
+        <p>New user? <a href="/register">Register</a></p>
+    </div>
 </body>
 </html>
+
